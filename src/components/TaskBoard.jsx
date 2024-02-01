@@ -6,17 +6,37 @@ import TaskList from "./TaskList";
 import TaskModal from "./TaskModal";
 
 export default function TaskBoard() {
-  const defaultTask = {
-    id: crypto.randomUUID(),
-    title: "Learn React Native",
-    description:
-      "I want to Learn React such thanI can treat it like my slave and make it do whatever I want to do.",
-    tags: ["web", "react", "js"],
-    priority: "High",
-    isFavorite: true,
-  };
+  const defaultTask = [
+    {
+      id: crypto.randomUUID(),
+      title: "Learn JavaScript",
+      description:
+        "I want to Learn React such thanI can treat it like my slave and make it do whatever I want to do.",
+      tags: ["web", "react", "js"],
+      priority: "High",
+      isFavorite: true,
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Learn React",
+      description:
+        "I want to Learn React such thanI can treat it like my slave and make it do whatever I want to do.",
+      tags: ["web", "react", "js"],
+      priority: "High",
+      isFavorite: true,
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Learn Next.js",
+      description:
+        "I want to Learn React such thanI can treat it like my slave and make it do whatever I want to do.",
+      tags: ["web", "react", "js"],
+      priority: "High",
+      isFavorite: false,
+    },
+  ];
 
-  const [tasks, setTasks] = useState([defaultTask]);
+  const [tasks, setTasks] = useState(defaultTask);
   const [showTaskModal, setShowTaskModal] = useState(false);
   const [updateTask, setUpdateTask] = useState(null);
 
